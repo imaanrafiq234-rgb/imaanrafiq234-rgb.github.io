@@ -1909,3 +1909,13 @@ h1, h2, h3, .cs-title, .hero h1, .contact h2, .card__title { font-optical-sizing
   .status i, .ticker span::after, .wave { animation: none; }
   .card:hover .card__frame, .portrait img, .portrait:hover img { transform: none; }
 }
+
+.cs-plate figcaption {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0.7rem 0.9rem;
+  border-top: 1px solid var(--line-soft);
+}
