@@ -1832,3 +1832,80 @@ h1, h2, h3, .cs-title, .hero h1, .contact h2, .card__title { font-optical-sizing
   .hero h1 { font-size: clamp(5.6rem, 5vw, 8.5rem); max-width: 19ch; }
   .sec-head__title { font-size: clamp(3.7rem, 3vw, 5.2rem); }
 }
+
+/* ==========================================================================
+   Play: small signs of life
+   ========================================================================== */
+
+/* the about section now opens the page, clear of the fixed header */
+.studio--top {
+  padding-top: clamp(6.5rem, 12vw, 10.5rem);
+  border-top: 0;
+}
+
+.studio--top + .hero { padding-top: clamp(3rem, 6vw, 5rem); }
+
+/* waving hello */
+.wave {
+  display: inline-block;
+  transform-origin: 72% 78%;
+  animation: wave 3.4s var(--ease) infinite;
+}
+
+@keyframes wave {
+  0%, 62%, 100% { transform: rotate(0deg); }
+  70% { transform: rotate(16deg); }
+  78% { transform: rotate(-7deg); }
+  86% { transform: rotate(11deg); }
+}
+
+/* the status light breathes */
+.status i { animation: status-pulse 2.8s ease-in-out infinite; }
+
+@keyframes status-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px color-mix(in srgb, #4f7d4a 18%, transparent); }
+  50% { box-shadow: 0 0 0 7px color-mix(in srgb, #4f7d4a 5%, transparent); }
+}
+
+/* the marquee stars turn */
+.ticker span::after { display: inline-block; animation: spin 10s linear infinite; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* the italic words get a hand-drawn underline */
+.hero h1 em,
+.studio__body h2 em {
+  text-decoration: underline wavy color-mix(in srgb, var(--accent) 42%, transparent);
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.14em;
+}
+
+/* cards lift off the page */
+.card__frame {
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease), border-color 0.4s var(--ease);
+}
+
+.card:hover .card__frame {
+  transform: translateY(-0.4rem) rotate(-0.3deg);
+  box-shadow: 0.55rem 0.55rem 0 color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+/* the portrait sits at a friendly angle */
+.portrait img {
+  transform: rotate(-1.6deg);
+  transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
+}
+
+.portrait:hover img {
+  transform: rotate(0.4deg) scale(1.02);
+  box-shadow: 0.45rem 0.45rem 0 color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+/* numbers lean in on hover */
+.statement__stats b { transition: color 0.3s var(--ease); }
+.statement__stats div:hover b { color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .status i, .ticker span::after, .wave { animation: none; }
+  .card:hover .card__frame, .portrait img, .portrait:hover img { transform: none; }
+}
