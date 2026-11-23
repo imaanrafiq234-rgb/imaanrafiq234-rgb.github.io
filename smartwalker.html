@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SmartWalker · Imaan Rafiq</title>
+<meta name="description" content="SmartWalker: an intelligent rollator with posture monitoring, obstacle detection, gait analysis and emergency alerting. Final year project and James Dyson Award 2026 entry." />
+<meta name="theme-color" content="#f1ece2" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316120d'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' fill='%23f1ece2' text-anchor='middle'%3EIR%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__in">
+    <a class="brand" href="index.html"><b>Imaan Rafiq</b><span>Product designer</span></a>
+    <nav class="nav" aria-label="Primary">
+      <span class="nav__primary">
+        <a href="index.html#work">Work</a>
+        <a href="work.html">Archive</a>
+        <a href="index.html#studio">Studio</a>
+      </span>
+      <span class="status"><i></i>Open to work</span>
+      <a class="head-contact" href="mailto:imaanrafiq234@gmail.com?subject=Enquiry%20from%20your%20portfolio">Email me <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="cs-hero wrap">
+  <a class="cs-back" href="work.html">← Archive</a>
+  <span class="eyebrow"><span class="n">01</span> · Final year project · 2025</span>
+  <h1 class="cs-title" style="margin-top:0.8rem">SmartWalker</h1>
+  <p class="cs-dek">
+    An intelligent rollator that monitors posture, detects obstacles, analyses gait and calls for help if the
+    user falls. Built to be affordable as well as clever.
+  </p>
+
+  <div class="cs-plate">
+    <img src="assets/img/smartwalker/03.jpg" alt="SmartWalker specification plate: intelligent features, affordability, weight of 6.5 kilograms, battery life and a 130 kilogram user limit" />
+  </div>
+
+  <dl class="cs-facts">
+    <div><dt>Role</dt><dd>User research · CAD · Electronics · FEA · BOM costing</dd></div>
+    <div><dt>Tools</dt><dd>SOLIDWORKS · ESP32-S3 · Arduino / C++ · KeyShot</dd></div>
+    <div><dt>Recognition</dt><dd>James Dyson Award 2026 entry</dd></div>
+    <div><dt>Deliverable</dt><dd>Working prototype and a 12-section technical report</dd></div>
+  </dl>
+
+  <!-- problem -->
+  <section class="cs-body">
+    <div class="cs-sticky"><span class="eyebrow">01 · The problem</span></div>
+    <div class="cs-prose">
+      <h2>Not something to lean on. <em>Something intelligent.</em></h2>
+      <p>
+        Conventional mobility aids are often visually clinical, uncomfortable and technologically outdated, which
+        contributes to reduced confidence, social stigma and limited independence for elderly users.
+      </p>
+      <p>
+        The SmartWalker started as a simple question: <b>what if a mobility aid actually worked for the person
+        using it?</b> Everything after that, from the mechanism to the firmware to the cost, was an attempt to
+        answer it.
+      </p>
+
+      <div class="cs-metrics">
+        <div><b>130 kg</b><span>Max user weight</span></div>
+        <div><b>6.5 kg</b><span>Total system weight</span></div>
+        <div><b>8 hrs</b><span>Per battery cycle</span></div>
+        <div><b>£252.99</b><span>Target BOM</span></div>
+      </div>
+
+      <p>
+        I built the working prototype from scratch: user research, mechanical CAD, electronics, sensor fusion,
+        FEA validation, a commercial bill of materials and a twelve-section technical report.
+      </p>
+    </div>
+  </section>
+
+  <!-- intelligence -->
+  <section class="cs-body">
+    <div class="cs-sticky"><span class="eyebrow">02 · Engineering</span></div>
+    <div class="cs-prose">
+      <h2>The firmware had to <em>grow up</em>.</h2>
+      <p>
+        The intelligence graduated from a benchtop test on an Arduino Uno to a production-ready ESP32-S3. The
+        8-bit Uno proved the core logic, but sensor fusion across several I2C devices pushed it to its limit.
+      </p>
+      <p>
+        The 32-bit dual-core chip changed that. High-frequency IMU polling moved to one core while emergency
+        braking and buzzer logic stayed on the other, which gave real multithreading and far more headroom for
+        filtering.
+      </p>
+
+      <ul class="cs-list">
+        <li><span class="n">01</span><span><b>Obstacle awareness</b>LiDAR and ultrasonic detection packaged into the frame without adding bulk.</span></li>
+        <li><span class="n">02</span><span><b>Posture and falls</b>IMU-based posture monitoring, with a fall state that triggers the alert.</span></li>
+        <li><span class="n">03</span><span><b>Gait analysis</b>AI-assisted gait reading, so the walker can tell more than moving or stopped.</span></li>
+        <li><span class="n">04</span><span><b>Emergency alerting</b>Bluetooth and 4G escalation by SMS when the user cannot respond.</span></li>
+        <li><span class="n">05</span><span><b>Feedback</b>Haptic and audio cues that warn before the hazard rather than after it.</span></li>
+        <li><span class="n">06</span><span><b>Wheels</b>Hybrid regenerative wheels that assist braking and walking over uneven ground.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- affordability -->
+  <section class="cs-body">
+    <div class="cs-sticky"><span class="eyebrow">03 · Positioning</span></div>
+    <div class="cs-prose">
+      <h2>Designed for more than <em>one income</em>.</h2>
+      <p>
+        One thing I felt strongly about from the start: this should not be a product only wealthy people can
+        access. Mobility issues do not discriminate by income.
+      </p>
+      <p>
+        So the design split into two tiers. The premium tier keeps the hybrid regenerative wheels that assist
+        braking and walking over uneven ground. The affordable tier strips back to the core safety technology,
+        which means fall detection, obstacle awareness and emergency alerts, so the people who need it most can
+        actually get it. <b>I think it is wrong to design assistive technology for one part of society and ignore
+        everyone else.</b>
+      </p>
+      <p>
+        That decision is why the £252.99 target BOM matters. Cost was a design constraint from the first sketch,
+        not a number bolted on at the end.
+      </p>
+    </div>
+  </section>
+
+  <!-- outcome -->
+  <section class="cs-body">
+    <div class="cs-sticky"><span class="eyebrow">04 · Outcome</span></div>
+    <div class="cs-prose">
+      <h2>The result, and what it <em>cost to get there</em>.</h2>
+      <p>
+        The walker supports users up to 130 kg, stays below 6.5 kg in total, and runs for eight hours per battery
+        cycle. The electronics and sensor modules were packaged to give real-time posture monitoring without a
+        weight penalty.
+      </p>
+      <p>
+        This is the project that pulled every skill I had into one object: research, CAD, firmware, FEA and
+        commercial costing. It is also the one that reminded me why I got into engineering. It has since been
+        submitted to the 2026 James Dyson Award.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-inline:0">
+    <div class="cs-gallery cs-gallery--2">
+      <figure><img src="assets/img/smartwalker/04.jpg" alt="SmartWalker inspiration and moodboard" loading="lazy" /><figcaption>Inspiration and moodboard</figcaption></figure>
+      <figure><img src="assets/img/smartwalker/05.jpg" alt="SmartWalker company position: about us, clients, mission and vision" loading="lazy" /><figcaption>Company position, mission and vision</figcaption></figure>
+      <figure><img src="assets/img/smartwalker/06.jpg" alt="SmartWalker Arduino IoT build, emergency button and connection mapping" loading="lazy" /><figcaption>Arduino IoT build and emergency button</figcaption></figure>
+      <figure><img src="assets/img/smartwalker/02.jpg" alt="SmartWalker smart assist, uphill braking control and contact dashboard" loading="lazy" /><figcaption>Smart assist and uphill braking control</figcaption></figure>
+    </div>
+  </section>
+
+  <div class="cs-next">
+    <span class="lab">Next project</span>
+    <a href="caretekk.html" data-nav="next">Caretekk Health ↗</a>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap site-foot__in">
+    <span>© <span data-year>2026</span> Imaan Rafiq · All work shown is the designer’s own</span>
+    <span><a href="work.html">Archive</a> · <a href="mailto:imaanrafiq234@gmail.com?subject=Enquiry%20from%20your%20portfolio">Email</a> · <a href="#top">Top ↑</a></span>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+<script src="motion.js" defer></script>
+</body>
+</html>
