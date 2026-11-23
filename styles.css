@@ -1819,3 +1819,10 @@ h1, h2, h3, .cs-title, .hero h1, .contact h2, .card__title { font-optical-sizing
 
 .copy-mail:hover { border-color: var(--ink); color: var(--ink); }
 .copy-mail.is-copied { border-color: var(--accent); background: var(--accent); color: #fff; }
+
+/* Very wide screens: let the display type grow with the column so the
+   full-width layout keeps its proportions instead of opening a gap. */
+@media (min-width: 1800px) {
+  .hero h1 { font-size: clamp(5.6rem, 5vw, 8.5rem); max-width: 19ch; }
+  .sec-head__title { font-size: clamp(3.7rem, 3vw, 5.2rem); }
+}
