@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Archive · Imaan Rafiq</title>
-<meta name="description" content="Every project in the archive: 25 entries across product design, design engineering, digital product work, electronics and sketch practice." />
+<meta name="description" content="Every project in the archive: 26 entries across product design, design engineering, digital product work, electronics and sketch practice." />
 <meta name="theme-color" content="#f1ece2" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316120d'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' fill='%23f1ece2' text-anchor='middle'%3EIR%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,12 +35,12 @@
     <span class="eyebrow"><span class="n">Archive</span> · 2023 to 2026</span>
     <h1 style="margin-top:1.2rem">Everything,<br /><em>in one place</em>.</h1>
     <p class="lead" style="margin-top:1.4rem">
-      Twenty-five entries covering product design, design engineering, digital work and electronics, plus the
+      Twenty-six entries covering product design, design engineering, digital work and electronics, plus the
       sketch practice that runs underneath all of it. The practice work is here as well. Rough drafts are where
       the thinking happens.
     </p>
     <div class="page-head__meta">
-      <span>25 entries</span>
+      <span>26 entries</span>
       <span>Product · Engineering · Digital · Sketch</span>
       <span>All imagery the designer’s own</span>
     </div>
@@ -55,7 +55,7 @@
       <button type="button" data-filter="sketch" aria-pressed="false">Sketch &amp; form</button>
       <button type="button" data-filter="technical" aria-pressed="false">Electronics</button>
       <button type="button" data-filter="background" aria-pressed="false">Background</button>
-      <span class="count" id="count">25 entries</span>
+      <span class="count" id="count">26 entries</span>
     </div>
 
     <div class="arch-grid" id="grid"></div>
@@ -271,7 +271,17 @@
       note: "Port placement was the deliberate choice: reachable and easy to use, without leaving the speaker open to damage. The clay model validated how it sat in the hand rather than how it looked.",
       role: "Research · Data collection · Form analysis · Concept design · CAD",
       tools: "SOLIDWORKS · KeyShot · Sketching",
-      imgs: ["rugged-speaker/00.jpg", "rugged-speaker/01.jpg", "rugged-speaker/02.jpg", "rugged-speaker/03.jpg", "rugged-speaker/04.jpg", "rugged-speaker/05.jpg", "rugged-speaker/06.jpg", "rugged-speaker/07.jpg", "rugged-speaker/08.jpg", "rugged-speaker/09.jpg", "rugged-speaker/10.jpg", "rugged-speaker/11.jpg", "rugged-speaker/12.jpg", "rugged-speaker/13.jpg", "rugged-speaker/14.jpg", "rugged-speaker/15.jpg", "rugged-speaker/16.jpg"]
+      imgs: ["rugged-speaker/00.jpg", "rugged-speaker/01.jpg", "rugged-speaker/02.jpg", "rugged-speaker/03.jpg", "rugged-speaker/04.jpg", "rugged-speaker/05.jpg", "rugged-speaker/06.jpg", "rugged-speaker/07.jpg", "rugged-speaker/08.jpg", "rugged-speaker/09.jpg", "rugged-speaker/10.jpg", "rugged-speaker/11.jpg", "rugged-speaker/12.jpg", "rugged-speaker/13.jpg", "rugged-speaker/14.jpg", "rugged-speaker/15.jpg", "rugged-speaker/16.jpg", "rugged-speaker/17.jpg", "rugged-speaker/18.jpg"]
+    },
+    {
+      slug: "wind-turbine", title: "Wind Turbine", kind: "Group build",
+      sub: "Rotor study, built at full size",
+      year: "2023", cats: ["engineering"], cover: "wind-turbine/00.jpg",
+      summary: "A small horizontal axis turbine, built and set up on the Aston campus lawn, with a CFD study behind the rotor.",
+      note: "Two builds went up side by side: a three blade rotor folded from sheet aluminium on a steel tripod, and a shorter set of blades on an orange hub. The CFD work looked at how the wind behaves across the blade sections before the geometry was cut, which is why the blades stay flat and simple rather than styled.",
+      role: "Rotor geometry · CFD study · Build and assembly",
+      tools: "CFD · Sheet aluminium · Steel fabrication",
+      imgs: ["wind-turbine/00.jpg"]
     },
     {
       slug: "pump-system", title: "Pump System", kind: "Hardware engineering",
@@ -371,7 +381,7 @@
   const dialog = document.getElementById("pdialog");
   const g = document.getElementById("pdialog-gallery");
 
-  const order = ["smartwalker", "caretekk", "khan", "loom", "nova-ledger", "coffee-machine", "pacifier", "prosthetic-hand", "med-diag", "aura", "breathalyser", "professor-layton", "audi-r8", "underwater-drone", "pizza-oven", "rugged-speaker", "pump-system", "embedded-systems", "form-analysis", "sketchbook", "apothecary", "seabream", "architect-aura", "portfolio-deck", "graduate"];
+  const order = ["smartwalker", "caretekk", "khan", "loom", "nova-ledger", "coffee-machine", "pacifier", "prosthetic-hand", "med-diag", "aura", "breathalyser", "professor-layton", "audi-r8", "underwater-drone", "pizza-oven", "rugged-speaker", "wind-turbine", "pump-system", "embedded-systems", "form-analysis", "sketchbook", "apothecary", "seabream", "architect-aura", "portfolio-deck", "graduate"];
   const sorted = order.map((s) => P.find((p) => p.slug === s)).filter(Boolean);
 
   let active = "all";
