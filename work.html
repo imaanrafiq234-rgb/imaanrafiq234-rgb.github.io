@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Archive · Imaan Rafiq</title>
-<meta name="description" content="Every project in the archive: 23 entries across product design, design engineering, digital product work, electronics and sketch practice." />
+<meta name="description" content="Every project in the archive: 24 entries across product design, design engineering, digital product work, electronics and sketch practice." />
 <meta name="theme-color" content="#f1ece2" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316120d'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' fill='%23f1ece2' text-anchor='middle'%3EIR%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,12 +35,12 @@
     <span class="eyebrow"><span class="n">Archive</span> · 2023 to 2026</span>
     <h1 style="margin-top:1.2rem">Everything,<br /><em>in one place</em>.</h1>
     <p class="lead" style="margin-top:1.4rem">
-      Twenty-three entries covering product design, design engineering, digital work and electronics, plus the
+      Twenty-four entries covering product design, design engineering, digital work and electronics, plus the
       sketch practice that runs underneath all of it. The practice work is here as well. Rough drafts are where
       the thinking happens.
     </p>
     <div class="page-head__meta">
-      <span>23 entries</span>
+      <span>24 entries</span>
       <span>Product · Engineering · Digital · Sketch</span>
       <span>All imagery the designer’s own</span>
     </div>
@@ -55,7 +55,7 @@
       <button type="button" data-filter="sketch" aria-pressed="false">Sketch &amp; form</button>
       <button type="button" data-filter="technical" aria-pressed="false">Electronics</button>
       <button type="button" data-filter="background" aria-pressed="false">Background</button>
-      <span class="count" id="count">23 entries</span>
+      <span class="count" id="count">24 entries</span>
     </div>
 
     <div class="arch-grid" id="grid"></div>
@@ -300,7 +300,8 @@
       note: "How often do we open CAD before understanding a form? A robust sketch is built rather than drawn: foundation, generation, modification, then control, which is the same order a good model follows.",
       role: "Form analysis · Orthographic and isometric drawing · CAD workflow study",
       tools: "Sketching · CAD",
-      imgs: ["form-analysis/00.jpg", "form-analysis/01.jpg", "form-analysis/02.jpg", "form-analysis/03.jpg"]
+      imgs: ["form-analysis/00.jpg", "form-analysis/01.jpg", "form-analysis/02.jpg", "form-analysis/03.jpg"],
+      study: "https://canva.link/hizwv1761yy6xmh", studyLabel: "View the toaster process deck →"
     },
     {
       slug: "sketchbook", title: "Sketchbook", kind: "Practice",
@@ -321,6 +322,16 @@
       role: "Structure design · Volumetrics · Art direction · Typesetting",
       tools: "Swatch reference · Packaging studies · User ergonomics",
       imgs: ["apothecary/00.jpg"]
+    },
+    {
+      slug: "architect-aura", title: "Architect Aura", kind: "Footwear concept",
+      sub: "Build, then wear test",
+      year: "2025", cats: ["product", "sketch"], cover: "architect-aura/00.jpg",
+      summary: "A trail running sneaker concept carried from a shop page mockup into a study of how the sole actually wears.",
+      note: "The build is a mesh and TPU upper on a dual density EVA midsole with a Vibram outsole, 385 g a shoe. The sketch sheet works the wear rather than the styling: pressure maps under the forefoot, tension lines across the toe box, and the roll from heel strike through mid stance to toe off.",
+      role: "Concept design · Form and wear study · Storefront art direction",
+      tools: "Sketching · Page layout · Mockup",
+      imgs: ["architect-aura/00.jpg", "architect-aura/02.jpg", "architect-aura/01.jpg"]
     },
     {
       slug: "portfolio-deck", title: "Portfolio Deck", kind: "Self-initiated",
@@ -349,7 +360,7 @@
   const dialog = document.getElementById("pdialog");
   const g = document.getElementById("pdialog-gallery");
 
-  const order = ["smartwalker", "caretekk", "khan", "loom", "nova-ledger", "coffee-machine", "pacifier", "prosthetic-hand", "med-diag", "aura", "breathalyser", "professor-layton", "audi-r8", "underwater-drone", "pizza-oven", "rugged-speaker", "pump-system", "embedded-systems", "form-analysis", "sketchbook", "apothecary", "portfolio-deck", "graduate"];
+  const order = ["smartwalker", "caretekk", "khan", "loom", "nova-ledger", "coffee-machine", "pacifier", "prosthetic-hand", "med-diag", "aura", "breathalyser", "professor-layton", "audi-r8", "underwater-drone", "pizza-oven", "rugged-speaker", "pump-system", "embedded-systems", "form-analysis", "sketchbook", "apothecary", "architect-aura", "portfolio-deck", "graduate"];
   const sorted = order.map((s) => P.find((p) => p.slug === s)).filter(Boolean);
 
   let active = "all";
