@@ -868,11 +868,22 @@ a.card:hover .card__line { color: var(--ink); }
   gap: 0.75rem;
 }
 
+.pdialog__gallery a { display: block; }
+
 .pdialog__gallery img {
   width: 100%;
   height: auto;
   border: 1px solid var(--line-soft);
   background: var(--plate);
+  cursor: zoom-in;
+}
+
+.pdialog__hint {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
 }
 
 .pdialog__body {

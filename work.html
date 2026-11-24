@@ -100,6 +100,7 @@
         <div><dt>Tools</dt><dd id="pdialog-tools"></dd></div>
       </dl>
       <p id="pdialog-link" style="margin-top:0.4rem"></p>
+      <p class="pdialog__hint">Click any image to open it full size</p>
     </div>
   </div>
 </dialog>
@@ -170,7 +171,7 @@
       note: "The real work was inside: fitting pumps, heating elements, reservoir and tubing into a tapered organic form. Two competing architectures were settled on paper and in 1:1 clay before any CAD time was spent.",
       role: "Research · Ideation · CAD modelling · Clay modelling",
       tools: "SOLIDWORKS · KeyShot · Clay and card modelling",
-      imgs: ["coffee-machine/01.jpg", "coffee-machine/08.jpg", "coffee-machine/02.jpg", "coffee-machine/03.jpg", "coffee-machine/04.jpg", "coffee-machine/05.jpg", "coffee-machine/06.jpg", "coffee-machine/07.jpg", "coffee-machine/00.jpg", "coffee-machine/c1.jpg"]
+      imgs: ["coffee-machine/01.jpg", "coffee-machine/08.jpg", "coffee-machine/02.jpg", "coffee-machine/03.jpg", "coffee-machine/04.jpg", "coffee-machine/05.jpg", "coffee-machine/06.jpg", "coffee-machine/07.jpg", "coffee-machine/09.jpg", "coffee-machine/10.jpg", "coffee-machine/00.jpg", "coffee-machine/c1.jpg"]
     },
     {
       slug: "pacifier", title: "Cocomelon Pacifier", kind: "Product design",
@@ -260,7 +261,7 @@
       note: "The chimney manages airflow so the oven does not overheat, and the side hole loads and clears coal with a shovel. Walnut veneer body, powder-coated ends and castors for moving it.",
       role: "Concept sketching · Cardboard mockup · Material and finish intent",
       tools: "Sketching · Card mockup · Rendering",
-      imgs: ["pizza-oven/00.jpg", "pizza-oven/01.jpg", "pizza-oven/02.jpg", "pizza-oven/03.jpg", "pizza-oven/04.jpg"]
+      imgs: ["pizza-oven/00.jpg", "pizza-oven/01.jpg", "pizza-oven/05.jpg", "pizza-oven/06.jpg", "pizza-oven/02.jpg", "pizza-oven/03.jpg", "pizza-oven/04.jpg"]
     },
     {
       slug: "rugged-speaker", title: "Rugged Speaker", kind: "First university project",
@@ -270,7 +271,7 @@
       note: "Port placement was the deliberate choice: reachable and easy to use, without leaving the speaker open to damage. The clay model validated how it sat in the hand rather than how it looked.",
       role: "Research · Data collection · Form analysis · Concept design · CAD",
       tools: "SOLIDWORKS · KeyShot · Sketching",
-      imgs: ["rugged-speaker/00.jpg", "rugged-speaker/01.jpg", "rugged-speaker/02.jpg", "rugged-speaker/03.jpg", "rugged-speaker/04.jpg", "rugged-speaker/05.jpg", "rugged-speaker/06.jpg", "rugged-speaker/07.jpg", "rugged-speaker/08.jpg", "rugged-speaker/09.jpg", "rugged-speaker/10.jpg", "rugged-speaker/11.jpg", "rugged-speaker/12.jpg", "rugged-speaker/13.jpg", "rugged-speaker/14.jpg"]
+      imgs: ["rugged-speaker/00.jpg", "rugged-speaker/01.jpg", "rugged-speaker/02.jpg", "rugged-speaker/03.jpg", "rugged-speaker/04.jpg", "rugged-speaker/05.jpg", "rugged-speaker/06.jpg", "rugged-speaker/07.jpg", "rugged-speaker/08.jpg", "rugged-speaker/09.jpg", "rugged-speaker/10.jpg", "rugged-speaker/11.jpg", "rugged-speaker/12.jpg", "rugged-speaker/13.jpg", "rugged-speaker/14.jpg", "rugged-speaker/15.jpg", "rugged-speaker/16.jpg"]
     },
     {
       slug: "pump-system", title: "Pump System", kind: "Hardware engineering",
@@ -399,7 +400,7 @@
     const p = sorted.find((x) => x.slug === slug);
     if (!p) return;
     g.innerHTML = p.imgs
-      .map((src) => `<img src="assets/img/${src}" alt="${p.title}, project image" loading="lazy" />`)
+      .map((src) => `<a href="assets/img/${src}" target="_blank" rel="noopener" title="Open full size"><img src="assets/img/${src}" alt="${p.title}, project image" loading="lazy" /></a>`)
       .join("");
     document.getElementById("pdialog-kind").textContent = `${p.kind} · ${p.year}`;
     document.getElementById("pdialog-title").textContent = p.title;
