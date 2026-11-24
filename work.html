@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Archive · Imaan Rafiq</title>
-<meta name="description" content="Every project in the archive: 24 entries across product design, design engineering, digital product work, electronics and sketch practice." />
+<meta name="description" content="Every project in the archive: 25 entries across product design, design engineering, digital product work, electronics and sketch practice." />
 <meta name="theme-color" content="#f1ece2" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316120d'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' fill='%23f1ece2' text-anchor='middle'%3EIR%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,12 +35,12 @@
     <span class="eyebrow"><span class="n">Archive</span> · 2023 to 2026</span>
     <h1 style="margin-top:1.2rem">Everything,<br /><em>in one place</em>.</h1>
     <p class="lead" style="margin-top:1.4rem">
-      Twenty-four entries covering product design, design engineering, digital work and electronics, plus the
+      Twenty-five entries covering product design, design engineering, digital work and electronics, plus the
       sketch practice that runs underneath all of it. The practice work is here as well. Rough drafts are where
       the thinking happens.
     </p>
     <div class="page-head__meta">
-      <span>24 entries</span>
+      <span>25 entries</span>
       <span>Product · Engineering · Digital · Sketch</span>
       <span>All imagery the designer’s own</span>
     </div>
@@ -55,7 +55,7 @@
       <button type="button" data-filter="sketch" aria-pressed="false">Sketch &amp; form</button>
       <button type="button" data-filter="technical" aria-pressed="false">Electronics</button>
       <button type="button" data-filter="background" aria-pressed="false">Background</button>
-      <span class="count" id="count">24 entries</span>
+      <span class="count" id="count">25 entries</span>
     </div>
 
     <div class="arch-grid" id="grid"></div>
@@ -190,7 +190,7 @@
       note: "A flex sensor reads movement in the user’s arm and an Arduino drives the servos. A fingertip temperature sensor warns red for hot and blue for cold before contact, and the circuit sits on the forearm rather than the palm that a chef works with.",
       role: "Form and concept analysis · Technical sketching · Electronics build",
       tools: "Arduino Uno · Flex sensor · Servo motors · Silicone dome",
-      imgs: ["prosthetic-hand/00.jpg", "prosthetic-hand/01.jpg", "prosthetic-hand/02.jpg", "prosthetic-hand/03.jpg", "prosthetic-hand/04.jpg", "prosthetic-hand/05.jpg", "prosthetic-hand/06.jpg", "prosthetic-hand/07.jpg", "prosthetic-hand/c1.jpg"]
+      imgs: ["prosthetic-hand/00.jpg", "prosthetic-hand/01.jpg", "prosthetic-hand/02.jpg", "prosthetic-hand/03.jpg", "prosthetic-hand/04.jpg", "prosthetic-hand/05.jpg", "prosthetic-hand/06.jpg", "prosthetic-hand/07.jpg", "prosthetic-hand/08.jpg", "prosthetic-hand/09.jpg", "prosthetic-hand/10.jpg", "prosthetic-hand/c1.jpg"]
     },
     {
       slug: "med-diag", title: "Med-Diag X1", kind: "Medical hardware",
@@ -260,7 +260,7 @@
       note: "The chimney manages airflow so the oven does not overheat, and the side hole loads and clears coal with a shovel. Walnut veneer body, powder-coated ends and castors for moving it.",
       role: "Concept sketching · Cardboard mockup · Material and finish intent",
       tools: "Sketching · Card mockup · Rendering",
-      imgs: ["pizza-oven/00.jpg", "pizza-oven/01.jpg", "pizza-oven/02.jpg"]
+      imgs: ["pizza-oven/00.jpg", "pizza-oven/01.jpg", "pizza-oven/02.jpg", "pizza-oven/03.jpg", "pizza-oven/04.jpg"]
     },
     {
       slug: "rugged-speaker", title: "Rugged Speaker", kind: "First university project",
@@ -324,6 +324,16 @@
       imgs: ["apothecary/00.jpg"]
     },
     {
+      slug: "seabream", title: "Sea Beam", kind: "Product design · Industry brief",
+      sub: "Modular marine searchlight",
+      year: "2025", cats: ["product", "engineering"], cover: "seabream/00.jpg",
+      summary: "A modular searchlight for offshore platforms, rescue vessels and marina work, designed with the Lighting Industry Association and HoloPhane.",
+      note: "The housing is 6061-T6 aluminium, CNC milled and powder coated, with borosilicate glass over twin LED optics. A micro wind turbine and solar backup feed a 24 V, 20 Ah LiFePO4 pack, which holds about 12 hours of backup at 40 W. Every internal part is a replaceable module, because offshore the harder problem is not the light, it is getting someone out to fix it.",
+      role: "Concept design · Materials selection · Manufacturing feasibility · Circularity",
+      tools: "SOLIDWORKS · Aluminium 6061-T6 · IP66 and IP67 · CIRSE TM66 assessment",
+      imgs: ["seabream/00.jpg", "seabream/01.jpg", "seabream/02.jpg"]
+    },
+    {
       slug: "architect-aura", title: "Architect Aura", kind: "Footwear concept",
       sub: "Build, then wear test",
       year: "2025", cats: ["product", "sketch"], cover: "architect-aura/00.jpg",
@@ -360,7 +370,7 @@
   const dialog = document.getElementById("pdialog");
   const g = document.getElementById("pdialog-gallery");
 
-  const order = ["smartwalker", "caretekk", "khan", "loom", "nova-ledger", "coffee-machine", "pacifier", "prosthetic-hand", "med-diag", "aura", "breathalyser", "professor-layton", "audi-r8", "underwater-drone", "pizza-oven", "rugged-speaker", "pump-system", "embedded-systems", "form-analysis", "sketchbook", "apothecary", "architect-aura", "portfolio-deck", "graduate"];
+  const order = ["smartwalker", "caretekk", "khan", "loom", "nova-ledger", "coffee-machine", "pacifier", "prosthetic-hand", "med-diag", "aura", "breathalyser", "professor-layton", "audi-r8", "underwater-drone", "pizza-oven", "rugged-speaker", "pump-system", "embedded-systems", "form-analysis", "sketchbook", "apothecary", "seabream", "architect-aura", "portfolio-deck", "graduate"];
   const sorted = order.map((s) => P.find((p) => p.slug === s)).filter(Boolean);
 
   let active = "all";
