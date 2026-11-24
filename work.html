@@ -48,6 +48,10 @@
 
   <div class="wrap">
     <div class="filters" role="group" aria-label="Filter by discipline">
+      <label class="filters__search">
+        <span>Search</span>
+        <input type="search" id="search" placeholder="Project, tool or year" autocomplete="off" spellcheck="false" />
+      </label>
       <button type="button" data-filter="all" aria-pressed="true">Everything</button>
       <button type="button" data-filter="product" aria-pressed="false">Product design</button>
       <button type="button" data-filter="engineering" aria-pressed="false">Design engineering</button>
@@ -100,7 +104,12 @@
         <div><dt>Tools</dt><dd id="pdialog-tools"></dd></div>
       </dl>
       <p id="pdialog-link" style="margin-top:0.4rem"></p>
-      <p class="pdialog__hint">Click any image to open it full size</p>
+      <div class="pdialog__nav">
+        <button type="button" id="pdialog-prev" aria-label="Previous project">← Previous</button>
+        <span class="pdialog__count" id="pdialog-count"></span>
+        <button type="button" id="pdialog-next" aria-label="Next project">Next →</button>
+      </div>
+      <p class="pdialog__hint">Click any image for full size. The arrow keys move between projects.</p>
     </div>
   </div>
 </dialog>
@@ -385,9 +394,17 @@
   const sorted = order.map((s) => P.find((p) => p.slug === s)).filter(Boolean);
 
   let active = "all";
+  let query = "";
+
+  function matches(p) {
+    if (active !== "all" && !p.cats.includes(active)) return false;
+    if (!query) return true;
+    const hay = [p.title, p.sub, p.kind, p.year, p.role, p.tools, p.summary].join(" ").toLowerCase();
+    return query.split(/\s+/).every((word) => hay.includes(word));
+  }
 
   function render() {
-    const items = sorted.filter((p) => active === "all" || p.cats.includes(active));
+    const items = sorted.filter(matches);
     grid.innerHTML = items
       .map((p) => {
         const n = String(sorted.indexOf(p) + 1).padStart(2, "0");
@@ -404,11 +421,21 @@
       })
       .join("");
     countEl.textContent = `${items.length} ${items.length === 1 ? "entry" : "entries"}`;
+    if (!items.length) {
+      const msg = document.createElement("p");
+      msg.className = "arch-empty";
+      msg.textContent = "Nothing matches that. Try a project name, a tool or a year.";
+      grid.append(msg);
+    }
   }
 
+  let current = 0;
+
   function open(slug, updateHash = true) {
-    const p = sorted.find((x) => x.slug === slug);
-    if (!p) return;
+    const i = sorted.findIndex((x) => x.slug === slug);
+    if (i < 0) return;
+    const p = sorted[i];
+    current = i;
     g.innerHTML = p.imgs
       .map((src) => `<a href="assets/img/${src}" target="_blank" rel="noopener" title="Open full size"><img src="assets/img/${src}" alt="${p.title}, project image" loading="lazy" /></a>`)
       .join("");
@@ -421,6 +448,9 @@
     document.getElementById("pdialog-tools").textContent = p.tools;
     const link = document.getElementById("pdialog-link");
     link.innerHTML = p.study ? `<a class="card__line" style="color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px" href="${p.study}">${p.studyLabel}</a>` : "";
+    document.getElementById("pdialog-count").textContent = `${String(i + 1).padStart(2, "0")} / ${sorted.length}`;
+    document.getElementById("pdialog-prev").disabled = i === 0;
+    document.getElementById("pdialog-next").disabled = i === sorted.length - 1;
     dialog.showModal();
     g.scrollTop = 0;
     document.querySelector(".pdialog__body").scrollTop = 0;
@@ -447,6 +477,38 @@
       document.querySelectorAll("[data-filter]").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
       render();
     });
+  });
+
+  /* how many entries sit behind each filter */
+  document.querySelectorAll("[data-filter]").forEach((btn) => {
+    const f = btn.dataset.filter;
+    const n = f === "all" ? P.length : P.filter((p) => p.cats.includes(f)).length;
+    const badge = document.createElement("span");
+    badge.className = "n";
+    badge.textContent = n;
+    btn.append(badge);
+  });
+
+  /* typing narrows the grid as well as the filters do */
+  const search = document.getElementById("search");
+  if (search) {
+    search.addEventListener("input", () => {
+      query = search.value.trim().toLowerCase();
+      render();
+    });
+  }
+
+  /* one project at a time, without going back to the grid */
+  function step(delta) {
+    const target = sorted[current + delta];
+    if (target) open(target.slug);
+  }
+
+  document.getElementById("pdialog-prev").addEventListener("click", () => step(-1));
+  document.getElementById("pdialog-next").addEventListener("click", () => step(1));
+  dialog.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") { e.preventDefault(); step(1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); step(-1); }
   });
 
   render();

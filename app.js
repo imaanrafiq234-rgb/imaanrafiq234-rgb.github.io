@@ -57,4 +57,16 @@
   document.querySelectorAll("[data-year]").forEach((el) => {
     el.textContent = String(new Date().getFullYear());
   });
+
+  /* a quiet way back up the long pages */
+  const toTop = document.createElement("a");
+  toTop.href = "#top";
+  toTop.className = "to-top";
+  toTop.setAttribute("aria-label", "Back to top");
+  toTop.innerHTML = '<span aria-hidden="true">↑</span> Top';
+  document.body.append(toTop);
+
+  const toggleTop = () => toTop.classList.toggle("is-on", window.scrollY > innerHeight * 0.85);
+  toggleTop();
+  addEventListener("scroll", toggleTop, { passive: true });
 })();
