@@ -1,0 +1,270 @@
+/* One source of truth for every project: the archive, the home page rows
+   and each project page all read from here. */
+window.PROJECTS = [
+    {
+      slug: "smartwalker", title: "SmartWalker", kind: "Final year project",
+      sub: "Enhancing independent mobility, James Dyson Award 2026 entry",
+      year: "2025", cats: ["product", "engineering", "technical"], cover: "smartwalker/00.jpg",
+      summary: "An intelligent rollator that monitors posture, detects obstacles, analyses gait and calls for help if the user falls.",
+      note: "Conventional mobility aids look clinical and feel out of date, which chips away at confidence and independence. The design split into two tiers so the core safety technology stays affordable, with the premium tier adding regenerative wheel assistance.",
+      role: "User research · CAD · Electronics · FEA · BOM costing",
+      tools: "SOLIDWORKS · ESP32-S3 · Arduino / C++ · KeyShot",
+      imgs: ["smartwalker/00.jpg", "smartwalker/01.jpg", "smartwalker/02.jpg", "smartwalker/03.jpg", "smartwalker/04.jpg", "smartwalker/05.jpg", "smartwalker/06.jpg", "smartwalker/deck-1.jpg", "smartwalker/deck-2.jpg", "smartwalker/deck-3.jpg", "smartwalker/deck-4.jpg"],
+      study: "smartwalker.html", studyLabel: "Read the full SmartWalker case study →"
+    },
+    {
+      slug: "caretekk", title: "Caretekk Health", kind: "Live brand & social design",
+      sub: "Health awareness campaign for a telehealth brand",
+      year: "2026", cats: ["digital"], cover: "caretekk/posts/offer-steps.jpg",
+      summary: "An ongoing social campaign for Caretekk, a Nigerian telehealth and home-care platform, turning clinical guidance into posts people act on.",
+      note: "The hard part is not the booking flow. It is getting someone to take a symptom seriously in the first place. Ten posts so far, covering three global health days, a Black Friday offer and two reels about care at home.",
+      role: "Content design · Campaign art direction · Health communication",
+      tools: "Figma · Illustrator · Instagram",
+      imgs: ["caretekk/posts/offer-steps.jpg", "caretekk/posts/offer-plate.jpg", "caretekk/posts/offer-parents.jpg", "caretekk/posts/arthritis-day.jpg", "caretekk/posts/menopause-day.jpg", "caretekk/posts/childrens-day.jpg", "caretekk/posts/new-month.jpg", "caretekk/posts/service-reminder.jpg", "caretekk/posts/reel-traffic.jpg", "caretekk/00.jpg"],
+      study: "caretekk.html", studyLabel: "Read the full Caretekk case study →"
+    },
+    {
+      slug: "khan", title: "Khan Terminal Interview Academy", kind: "Product and UX review",
+      sub: "A week one audit, then a redesign proposal for the academy",
+      year: "2026", cats: ["digital"], cover: "khan/01.jpg",
+      summary: "A week one accessibility and UX audit of a live finance interview-prep platform, followed by eight screen concepts for the Interview Academy.",
+      note: "The audit found seven issues, three of them blocking: a greeting that used a demo name, a watchlist that returned a 404, and a header that still asked a signed-in user to sign in. The proposal keeps every engine and rebuilds the surface around one clear next action.",
+      role: "Product and UX review · Interface design · Design system · Rollout plan",
+      tools: "Live product audit · Contrast and target measurement · Concept screens",
+      imgs: ["khan/01.jpg", "khan/02.jpg", "khan/03.jpg", "khan/04.jpg", "khan/05.jpg", "khan/06.jpg", "khan/07.jpg", "khan/08.jpg"],
+      study: "khan.html", studyLabel: "Read the full Khan Terminal case study →"
+    },
+    {
+      slug: "loom", title: "LOOM", kind: "Digital product design",
+      sub: "End-to-end e-commerce UX and UI",
+      year: "2025", cats: ["digital"], cover: "loom/00.jpg",
+      summary: "A functioning e-commerce experience for considered wardrobe and home goods, built as a sandbox for the whole UX and UI process.",
+      note: "Plotting a six-step customer journey early, and roughly, surfaced the friction before any visual design was committed. The interface was then assembled from Auto Layout components and variants.",
+      role: "UX research · User journey mapping · UI design · Prototyping",
+      tools: "Figma · Auto Layout · Component libraries · Variants",
+      imgs: ["loom/00.jpg", "loom/01.jpg", "loom/02.jpg", "loom/03.jpg", "loom/04.jpg", "loom/05.jpg"]
+    },
+    {
+      slug: "nova-ledger", title: "Nova Ledger", kind: "Visual & product design",
+      sub: "Financial clarity, elevated",
+      year: "2025", cats: ["digital"], cover: "nova-ledger/01.jpg",
+      summary: "A dark-mode concept carousel for a personal finance platform, put together over one weekend.",
+      note: "A deep forest-green canvas keeps the screen easy on the eyes, with lime held back for metrics and buttons. Soft shadows and rounded cards let the UI read as objects sitting on a surface.",
+      role: "Visual design · Typography · Layout · Dark-mode UI",
+      tools: "Figma · Display typography · Component variants",
+      imgs: ["nova-ledger/00.jpg", "nova-ledger/01.jpg", "nova-ledger/02.jpg", "nova-ledger/03.jpg", "nova-ledger/04.jpg", "nova-ledger/05.jpg", "nova-ledger/06.jpg"]
+    },
+    {
+      slug: "coffee-machine", title: "Cobra Coffee Machine", kind: "Product design",
+      sub: "Form, flow and internal architecture",
+      year: "2025", cats: ["product", "engineering"], cover: "coffee-machine/08.jpg",
+      summary: "A start-to-finish development of a modern coffee machine, with a design language taken from the posture of a cobra.",
+      note: "The real work was inside: fitting pumps, heating elements, reservoir and tubing into a tapered organic form. Two competing architectures were settled on paper and in 1:1 clay before any CAD time was spent.",
+      role: "Research · Ideation · CAD modelling · Clay modelling",
+      tools: "SOLIDWORKS · KeyShot · Clay and card modelling",
+      imgs: ["coffee-machine/01.jpg", "coffee-machine/08.jpg", "coffee-machine/02.jpg", "coffee-machine/03.jpg", "coffee-machine/04.jpg", "coffee-machine/05.jpg", "coffee-machine/06.jpg", "coffee-machine/07.jpg", "coffee-machine/09.jpg", "coffee-machine/10.jpg", "coffee-machine/00.jpg", "coffee-machine/c1.jpg", "coffee-machine/deck-1.jpg", "coffee-machine/deck-2.jpg", "coffee-machine/deck-3.jpg", "coffee-machine/deck-4.jpg"]
+    },
+    {
+      slug: "pacifier", title: "Cocomelon Pacifier", kind: "Product design",
+      sub: "Child safety, materials and circular economy",
+      year: "2025", cats: ["product", "engineering"], cover: "pacifier/00.jpg",
+      summary: "A pacifier developed around a single-mum persona, where the material choice decided the product rather than the styling.",
+      note: "Silicone was specified for heat resistance, flexibility and repeat sterilising. Colour carries meaning rather than decoration: green for calm, cream for warmth, red to catch a parent’s eye, blue for trust.",
+      role: "Persona research · Concept sketching · Engineering drawings · Material study",
+      tools: "Injection moulding study · Silicone research · 3D printed model",
+      imgs: ["pacifier/00.jpg", "pacifier/02.jpg", "pacifier/01.jpg", "pacifier/03.jpg", "pacifier/04.jpg", "pacifier/05.jpg"]
+    },
+    {
+      slug: "prosthetic-hand", title: "Prosthetic Hand", kind: "Design engineering",
+      sub: "Designed around how a chef actually works",
+      year: "2025", cats: ["engineering", "technical"], cover: "prosthetic-hand/00.jpg",
+      summary: "A prosthetic hand for use in a professional kitchen, built from a study of how a hand grips, holds and manipulates a knife.",
+      note: "A flex sensor reads movement in the user’s arm and an Arduino drives the servos. A fingertip temperature sensor warns red for hot and blue for cold before contact, and the circuit sits on the forearm rather than the palm that a chef works with.",
+      role: "Form and concept analysis · Technical sketching · Electronics build",
+      tools: "Arduino Uno · Flex sensor · Servo motors · Silicone dome",
+      imgs: ["prosthetic-hand/00.jpg", "prosthetic-hand/01.jpg", "prosthetic-hand/02.jpg", "prosthetic-hand/03.jpg", "prosthetic-hand/04.jpg", "prosthetic-hand/05.jpg", "prosthetic-hand/06.jpg", "prosthetic-hand/07.jpg", "prosthetic-hand/08.jpg", "prosthetic-hand/09.jpg", "prosthetic-hand/10.jpg", "prosthetic-hand/c1.jpg"]
+    },
+    {
+      slug: "med-diag", title: "Med-Diag X1", kind: "Medical hardware",
+      sub: "Handheld biometric triage platform",
+      year: "2025", cats: ["product", "engineering", "technical"], cover: "med-diag/00.jpg",
+      summary: "A non-invasive clinical diagnostic device combining PPG pulse monitoring, contactless infrared thermopiles and a thumb-wheel interface for field triage.",
+      note: "Field triage is a one-handed job. The thumb wheel was placed by measuring the single-handed thumb sweep across the 5th to 95th percentile reach, with thermal cutaways keeping the electronics inside safe limits.",
+      role: "Clinical product design · Anthropometrics · Sanitary design",
+      tools: "Medical grade ABS · OLED · Anthropometric study",
+      imgs: ["med-diag/00.jpg"]
+    },
+    {
+      slug: "aura", title: "Aura", kind: "Ergonomic wellness hardware",
+      sub: "Ultrasonic microcurrent facial contouring system",
+      year: "2025", cats: ["product", "engineering"], cover: "aura/00.jpg",
+      summary: "High-precision skincare hardware with capacitive skin-contact gating, 3 MHz ultrasonic infusion and biosafe anodised champagne gold electrode nodes.",
+      note: "The device only energises its electrodes when capacitive sensing confirms real skin contact. That one behaviour is what separates a wellness tool from a hazard, and it is invisible in the object.",
+      role: "Industrial design · Skin-contact safety · Ergonomics",
+      tools: "Concept sketching · Engineering layout · Anodised CMF",
+      imgs: ["aura/00.jpg"]
+    },
+    {
+      slug: "breathalyser", title: "Breathalyser", kind: "Product design",
+      sub: "Sketch, CAD, render",
+      year: "2024", cats: ["product", "sketch"], cover: "breathalyser/00.jpg",
+      summary: "A handheld alcohol breathalyser through the full pipeline, from red-line concepts to parametric CAD and a high-fidelity render.",
+      note: "The handle tapers to 28 mm at the palm, and the mouthpiece axis carries a 15 mm offset so the display holds a 45-degree sight line while the user blows.",
+      role: "Concept sketching · Parametric CAD · Final rendering",
+      tools: "SOLIDWORKS · KeyShot",
+      imgs: ["breathalyser/00.jpg", "breathalyser/01.jpg", "breathalyser/02.jpg"]
+    },
+    {
+      slug: "professor-layton", title: "Professor Layton Device", kind: "Concept exercise",
+      sub: "World-building through form",
+      year: "2024", cats: ["product", "sketch"], cover: "professor-layton/03.jpg",
+      summary: "A real-world, tactile reading of a handheld communication device inspired by Nintendo’s Professor Layton.",
+      note: "Arched windows became a speaker grille and clockwork gears became the selectors. The controls are spaced to encourage slow, deliberate use rather than rapid tapping.",
+      role: "Visual DNA mapping · Form ideation · CAD · Physical prototype",
+      tools: "SOLIDWORKS · Physical model · Reference analysis",
+      imgs: ["professor-layton/00.jpg", "professor-layton/01.jpg", "professor-layton/02.jpg", "professor-layton/03.jpg", "professor-layton/04.jpg", "professor-layton/c1.jpg"]
+    },
+    {
+      slug: "audi-r8", title: "Audi R8 Form Analysis", kind: "Automotive study",
+      sub: "Form is function",
+      year: "2025", cats: ["sketch"], cover: "audi-r8/00.jpg",
+      summary: "A form analysis of the Audi R8, looking at how pure performance shapes every line.",
+      note: "A mid-engine layout forces a cab-forward volume to balance axle weight, and the Coke-bottle profile channels air to the rear wing. The proportion follows where the mass has to sit.",
+      role: "Automotive sketching · Aerodynamic and proportion analysis",
+      tools: "Marker and pen sketching",
+      imgs: ["audi-r8/00.jpg", "audi-r8/01.jpg", "audi-r8/02.jpg"]
+    },
+    {
+      slug: "underwater-drone", title: "Underwater Drone", kind: "Concept study",
+      sub: "Golden Snitch inspired",
+      year: "2024", cats: ["product", "sketch"], cover: "underwater-drone/00.jpg",
+      summary: "Early concept iterations for an underwater drone, inspired by the Golden Snitch.",
+      note: "Grounded in research into drowning and water safety, then worked as a surface-modelling exercise: how closely can an organic form be controlled in CAD without losing the sketch?",
+      role: "Concept sketching · Surface modelling · Model quality",
+      tools: "Sketching · SOLIDWORKS surface modelling",
+      imgs: ["underwater-drone/00.jpg", "underwater-drone/01.jpg", "underwater-drone/02.jpg", "underwater-drone/03.jpg", "underwater-drone/deck-1.jpg", "underwater-drone/deck-2.jpg", "underwater-drone/deck-3.jpg", "underwater-drone/deck-4.jpg"]
+    },
+    {
+      slug: "pizza-oven", title: "Pizza Oven", kind: "Concept study",
+      sub: "Sketch, mockup, render",
+      year: "2025", cats: ["product", "sketch"], cover: "pizza-oven/00.jpg",
+      summary: "A pizza oven concept developed sketch first, then proven in cardboard, then refined in render.",
+      note: "The chimney manages airflow so the oven does not overheat, and the side hole loads and clears coal with a shovel. Walnut veneer body, powder-coated ends and castors for moving it.",
+      role: "Concept sketching · Cardboard mockup · Material and finish intent",
+      tools: "Sketching · Card mockup · Rendering",
+      imgs: ["pizza-oven/00.jpg", "pizza-oven/01.jpg", "pizza-oven/05.jpg", "pizza-oven/06.jpg", "pizza-oven/02.jpg", "pizza-oven/03.jpg", "pizza-oven/04.jpg"]
+    },
+    {
+      slug: "rugged-speaker", title: "Rugged Speaker", kind: "First university project",
+      sub: "Where the design journey started",
+      year: "2023", cats: ["product", "sketch"], cover: "rugged-speaker/13.jpg",
+      summary: "My first university design project, revisited to see how a simple geometric form becomes a considered decision through iteration.",
+      note: "Port placement was the deliberate choice: reachable and easy to use, without leaving the speaker open to damage. The clay model validated how it sat in the hand rather than how it looked.",
+      role: "Research · Data collection · Form analysis · Concept design · CAD",
+      tools: "SOLIDWORKS · KeyShot · Sketching",
+      imgs: ["rugged-speaker/00.jpg", "rugged-speaker/01.jpg", "rugged-speaker/02.jpg", "rugged-speaker/03.jpg", "rugged-speaker/04.jpg", "rugged-speaker/05.jpg", "rugged-speaker/06.jpg", "rugged-speaker/07.jpg", "rugged-speaker/08.jpg", "rugged-speaker/09.jpg", "rugged-speaker/10.jpg", "rugged-speaker/11.jpg", "rugged-speaker/12.jpg", "rugged-speaker/13.jpg", "rugged-speaker/14.jpg", "rugged-speaker/15.jpg", "rugged-speaker/16.jpg", "rugged-speaker/17.jpg", "rugged-speaker/18.jpg", "rugged-speaker/deck-1.jpg", "rugged-speaker/deck-2.jpg", "rugged-speaker/deck-3.jpg", "rugged-speaker/deck-4.jpg"]
+    },
+    {
+      slug: "wind-turbine", title: "Wind Turbine", kind: "Group build",
+      sub: "Rotor study, built at full size",
+      year: "2023", cats: ["engineering"], cover: "wind-turbine/00.jpg",
+      summary: "A small horizontal axis turbine, built and set up on the Aston campus lawn, with a CFD study behind the rotor.",
+      note: "Two builds went up side by side: a three blade rotor folded from sheet aluminium on a steel tripod, and a shorter set of blades on an orange hub. The CFD work looked at how the wind behaves across the blade sections before the geometry was cut, which is why the blades stay flat and simple rather than styled.",
+      role: "Rotor geometry · CFD study · Build and assembly",
+      tools: "CFD · Sheet aluminium · Steel fabrication",
+      imgs: ["wind-turbine/00.jpg"]
+    },
+    {
+      slug: "pump-system", title: "Pump System", kind: "Hardware engineering",
+      sub: "The paper trail behind the product",
+      year: "2025", cats: ["engineering", "technical"], cover: "pump-system/00.jpg",
+      summary: "The engineering paper trail for a pressure pump system: geometry sketches, block diagram, circuit schematic, sizing calculations and CAD.",
+      note: "At 12 V dc and 10 A maximum the system draws 120 W, and 30 W at a typical 2.5 A. Sizing a 1:7 divider and amplifier gains of 50 and 2 turned the numbers into a circuit that could actually be built.",
+      role: "Systems design · Circuit design · Calculations · CAD",
+      tools: "Sketches · Block diagram · Circuit schematic · SOLIDWORKS",
+      imgs: ["pump-system/00.jpg", "pump-system/05.jpg", "pump-system/01.jpg", "pump-system/02.jpg", "pump-system/03.jpg", "pump-system/04.jpg", "pump-system/c1.jpg"]
+    },
+    {
+      slug: "embedded-systems", title: "Embedded Systems Series", kind: "Technical communication",
+      sub: "Understanding the brain behind modern devices",
+      year: "2024", cats: ["technical"], cover: "embedded-systems/00.jpg",
+      summary: "A beginner’s guide to embedded systems, with block diagrams, component comparisons and applications, drawn so it can be read.",
+      note: "Input processing, decision making and output activation, explained through a temperature sensor switching a fan. Arduino Uno, ESP32, STM32 and Raspberry Pi compared for what each is actually for.",
+      role: "Research · Technical writing · Visual explanation",
+      tools: "Adobe Illustrator · Technical diagrams",
+      imgs: ["embedded-systems/00.jpg", "embedded-systems/01.jpg", "embedded-systems/02.jpg", "embedded-systems/04.jpg"]
+    },
+    {
+      slug: "form-analysis", title: "Form Analysis & CAD", kind: "Practice",
+      sub: "Toaster breakdown and CAD workflow",
+      year: "2024", cats: ["sketch"], cover: "form-analysis/00.jpg",
+      summary: "A self-set challenge to post three or four times a week on nothing but sketches and form analysis, starting with a toaster.",
+      note: "How often do we open CAD before understanding a form? A robust sketch is built rather than drawn: foundation, generation, modification, then control, which is the same order a good model follows.",
+      role: "Form analysis · Orthographic and isometric drawing · CAD workflow study",
+      tools: "Sketching · CAD",
+      imgs: ["form-analysis/00.jpg", "form-analysis/01.jpg", "form-analysis/02.jpg", "form-analysis/03.jpg"],
+      study: "https://canva.link/hizwv1761yy6xmh", studyLabel: "View the toaster process deck →"
+    },
+    {
+      slug: "sketchbook", title: "Sketchbook", kind: "Practice",
+      sub: "Why I still can’t give it up",
+      year: "2024", cats: ["sketch"], cover: "sketchbook/00.jpg",
+      summary: "A page from the notebook: raw ideation for a portable speaker, and why the pen and paper habit still drives the process.",
+      note: "Open 3D software first and I instinctively polish the first thing I build. Paper gets ten ideas out in the time it takes to render one, and the notes in the margin are me arguing with myself.",
+      role: "Form ideation · Annotation · Daily sketch practice",
+      tools: "Pen and paper, a portable speaker form study",
+      imgs: ["sketchbook/00.jpg", "sketchbook/01.jpg", "sketchbook/04.jpg", "sketchbook/07.jpg"]
+    },
+    {
+      slug: "apothecary", title: "Botanic Rituals", kind: "Packaging design",
+      sub: "Limited apothecary batch, structure and volumetrics",
+      year: "2025", cats: ["product"], cover: "apothecary/00.jpg",
+      summary: "A limited apothecary batch of cold-pressed botanic seed oil, with packaging structure, volumetrics and a swatch reference.",
+      note: "The carton was worked as a volumetrics study: how much air can the pack hold before it reads as waste on a shelf? A pouch and batch card make unboxing the first step of the routine.",
+      role: "Structure design · Volumetrics · Art direction · Typesetting",
+      tools: "Swatch reference · Packaging studies · User ergonomics",
+      imgs: ["apothecary/00.jpg"]
+    },
+    {
+      slug: "seabream", title: "Sea Beam", kind: "Product design · Industry brief",
+      sub: "Modular marine searchlight",
+      year: "2025", cats: ["product", "engineering"], cover: "seabream/00.jpg",
+      summary: "A modular searchlight for offshore platforms, rescue vessels and marina work, designed with the Lighting Industry Association and HoloPhane.",
+      note: "The housing is 6061-T6 aluminium, CNC milled and powder coated, with borosilicate glass over twin LED optics. A micro wind turbine and solar backup feed a 24 V, 20 Ah LiFePO4 pack, which holds about 12 hours of backup at 40 W. Every internal part is a replaceable module, because offshore the harder problem is not the light, it is getting someone out to fix it.",
+      role: "Concept design · Materials selection · Manufacturing feasibility · Circularity",
+      tools: "SOLIDWORKS · Aluminium 6061-T6 · IP66 and IP67 · CIRSE TM66 assessment",
+      imgs: ["seabream/00.jpg", "seabream/01.jpg", "seabream/02.jpg"]
+    },
+    {
+      slug: "architect-aura", title: "Architect Aura", kind: "Footwear concept",
+      sub: "Build, then wear test",
+      year: "2025", cats: ["product", "sketch"], cover: "architect-aura/00.jpg",
+      summary: "A trail running sneaker concept carried from a shop page mockup into a study of how the sole actually wears.",
+      note: "The build is a mesh and TPU upper on a dual density EVA midsole with a Vibram outsole, 385 g a shoe. The sketch sheet works the wear rather than the styling: pressure maps under the forefoot, tension lines across the toe box, and the roll from heel strike through mid stance to toe off.",
+      role: "Concept design · Form and wear study · Storefront art direction",
+      tools: "Sketching · Page layout · Mockup",
+      imgs: ["architect-aura/00.jpg", "architect-aura/02.jpg", "architect-aura/01.jpg"]
+    },
+    {
+      slug: "portfolio-deck", title: "Portfolio Deck", kind: "Self-initiated",
+      sub: "The printed book",
+      year: "2025", cats: ["background", "sketch"], cover: "portfolio-deck/00.jpg",
+      summary: "The printed book behind four of the projects here. Its spreads now sit inside each project, so the work can be read on its own rather than as one long sequence.",
+      note: "Each project follows the same rhythm: title, brief, research and insight, process, outcome. Holding that structure steady lets the work carry the variation. What is left here is the book itself: the cover, the two opening pages and a contact sheet of renders, with the project spreads now filed under their own projects.",
+      role: "Layout · Sequencing · Writing · Image editing",
+      tools: "Print layout · Adobe suite",
+      imgs: ["portfolio-deck/00.jpg", "portfolio-deck/01.jpg", "portfolio-deck/02.jpg", "portfolio-deck/c1.jpg"]
+    },
+    {
+      slug: "graduate", title: "Design Engineering Graduate", kind: "Background",
+      sub: "BSc Product Design & Technology",
+      year: "2025", cats: ["background"], cover: "graduate/01.jpg",
+      summary: "BSc Product Design & Technology from Aston University, following a Triple Engineering BTEC at JCB Academy.",
+      note: "BSc Product Design & Technology at Aston University, 2:1 (2022 to 2025), after a Triple Engineering BTEC in mechanical, electrical and design at JCB Academy (DDM) and a Silver Industrial Cadet Award. I can design complex parts in SOLIDWORKS and CATIA, write the embedded C++ that makes them do something, understand lean manufacturing from the Toyota production floor, and cost a full BOM with a pricing strategy around it.",
+      role: "SOLIDWORKS · CATIA · Embedded C++ · Lean manufacturing · BOM costing",
+      tools: "Aston University",
+      imgs: ["graduate/00.jpg", "graduate/01.jpg"]
+    }
+  ];
+
+window.PROJECT_ORDER = ["smartwalker", "caretekk", "khan", "loom", "nova-ledger", "coffee-machine", "pacifier", "prosthetic-hand", "med-diag", "seabream", "apothecary", "rugged-speaker", "aura", "architect-aura", "breathalyser", "pizza-oven", "professor-layton", "wind-turbine", "audi-r8", "underwater-drone", "pump-system", "embedded-systems", "form-analysis", "sketchbook", "portfolio-deck", "graduate"];
