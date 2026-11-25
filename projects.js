@@ -20,7 +20,7 @@ window.PROJECTS = [
       note: "The hard part is not the booking flow. It is getting someone to take a symptom seriously in the first place. Ten posts so far, covering three global health days, a Black Friday offer and two reels about care at home.",
       role: "Content design · Campaign art direction · Health communication",
       tools: "Figma · Illustrator · Instagram",
-      imgs: ["caretekk/posts/offer-steps.jpg", "caretekk/posts/offer-plate.jpg", "caretekk/posts/offer-parents.jpg", "caretekk/posts/arthritis-day.jpg", "caretekk/posts/menopause-day.jpg", "caretekk/posts/childrens-day.jpg", "caretekk/posts/new-month.jpg", "caretekk/posts/service-reminder.jpg", "caretekk/posts/reel-traffic.jpg", "caretekk/00.jpg"],
+      imgs: ["caretekk/posts/offer-steps.jpg", "caretekk/posts/offer-plate.jpg", "caretekk/posts/offer-parents.jpg", "caretekk/posts/arthritis-day.jpg", "caretekk/posts/menopause-day.jpg", "caretekk/posts/childrens-day.jpg", "caretekk/posts/new-month.jpg", "caretekk/posts/service-reminder.jpg", "caretekk/posts/reel-traffic.jpg"],
       study: "caretekk.html", studyLabel: "Read the full Caretekk case study →"
     },
     {

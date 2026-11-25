@@ -75,7 +75,8 @@ sorted.forEach((p, i) => {
   const prev = sorted[i - 1];
   const next = sorted[i + 1];
   const num = String(i + 1).padStart(2, '0');
-  const rest = p.imgs.slice(1);
+  const imgs = [...new Set(p.imgs)];
+  const rest = imgs.filter((src) => src !== p.cover);
 
   const studyHref = p.study && /^(https?:|mailto:|#|\/)/i.test(p.study) ? p.study : `../${p.study || ''}`;
   const study = p.study
@@ -97,7 +98,7 @@ ${rest
   .join('\n')}
   </section>
 
-  <p class="wrap proj__count">${p.imgs.length} ${p.imgs.length === 1 ? 'image' : 'images'} · ${esc(
+  <p class="wrap proj__count">${imgs.length} ${imgs.length === 1 ? 'image' : 'images'} · ${esc(
     p.kind
   )} · ${esc(p.year)}</p>`
     : '';
@@ -113,8 +114,8 @@ ${rest
       <h1>${esc(p.title)}</h1>
       <p class="lead">${esc(p.sub)}</p>
       <div class="proj__meta"><span>${esc(p.year)}</span><span>${esc(p.kind)}</span><span>${
-  p.imgs.length
-} ${p.imgs.length === 1 ? 'image' : 'images'}</span></div>${study}
+  imgs.length
+} ${imgs.length === 1 ? 'image' : 'images'}</span></div>${study}
     </section>
 
     <figure class="wrap proj__hero">
