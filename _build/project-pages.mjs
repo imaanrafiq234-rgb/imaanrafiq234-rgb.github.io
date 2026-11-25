@@ -77,8 +77,9 @@ sorted.forEach((p, i) => {
   const num = String(i + 1).padStart(2, '0');
   const rest = p.imgs.slice(1);
 
+  const studyHref = p.study && /^(https?:|mailto:|#|\/)/i.test(p.study) ? p.study : `../${p.study || ''}`;
   const study = p.study
-    ? `\n      <p class="proj__study"><a class="btn btn--ghost" href="../${esc(p.study)}">${esc(
+    ? `\n      <p class="proj__study"><a class="btn btn--ghost" href="${esc(studyHref)}">${esc(
         p.studyLabel || 'Read the full case study'
       )}</a></p>`
     : '';
